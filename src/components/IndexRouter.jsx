@@ -16,24 +16,21 @@ import PurchaseGuide from "./PurchaseGuide/PurchaseGuide";
 
 const IndexRouter = () => {
   return (
-    <div>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/Home" element={<Home />} />
-          <Route path="/Listing" element={<Listing />} />
-          <Route path="/Contact" element={<Contact />} />
-          <Route path="/About" element={<About />} />
-          <Route path="/DetailsProduct" element={<DetailsProduct />} />
-          <Route path="/MyAccount" element={<MyAccount />} />
-          <Route path="/Login" element={<Login />} />
-          <Route path="/ForgetPassword" element={<ForgetPassword />} />
-          <Route path="/ResetPassword" element={<ResetPassword />} />
-          <Route path="/PurchaseGuide" element={<PurchaseGuide />} />
-          <Route path="*" element={<PageNotFound404 />} />
-        </Routes>
-      </BrowserRouter>
-    </div>
+   
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/Home" element={<Home />} />
+        <Route path="/Listing" element={<Listing />} />
+        <Route path="/Contact" element={<Contact />} />
+        <Route path="/About" element={<About />} />
+        <Route path="/DetailsProduct" element={<DetailsProduct />} />
+        <Route path="/MyAccount" element={<MyAccount />} />
+        <Route path="/Login" element={<Login />} />
+        <Route path="/ForgetPassword" element={<ForgetPassword />} />
+        <Route path="/ResetPassword" element={<ResetPassword />} />
+        <Route path="/PurchaseGuide" element={<PurchaseGuide />} />
+        <Route path="*" element={<PageNotFound404 />} />
+      </Routes>
   );
 };
 

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import "../Header/Header.css";
 import Logo from "../../assets/Images/logo.svg";
 import SearchIcon from "@mui/icons-material/Search";
@@ -229,7 +230,8 @@ const Header = () => {
                         <li className="UserDropDownList">
                           <Button>
                             {" "}
-                            <PersonIcon /> &nbsp; My Account
+                            <PersonIcon /> &nbsp;{" "}
+                            <Link to={"/MyAccount"}>My Account</Link>
                           </Button>
                         </li>
                         <li className="UserDropDownList">

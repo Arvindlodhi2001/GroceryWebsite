@@ -1,12 +1,12 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
 import "./Nav.css";
 
 import Button from "@mui/material/Button";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 import GridViewIcon from "@mui/icons-material/GridView";
 import HeadsetMicIcon from "@mui/icons-material/HeadsetMic";
-
-import { Link } from "react-router-dom";
 
 const Nav = () => {
   return (
@@ -24,17 +24,25 @@ const Nav = () => {
               <ul className="list list-inline mb-0">
                 <li className="list-inline-item">
                   {" "}
-                  <Button>
-                    Home &nbsp; <KeyboardArrowRightIcon />{" "}
-                  </Button>{" "}
+                  <Link to={"/Home"} className="Link">
+                    <Button>
+                      Home &nbsp; <KeyboardArrowRightIcon />{" "}
+                    </Button>{" "}
+                  </Link>
                 </li>
                 <li className="list-inline-item">
-                  <Button>About</Button>
+                  <Link to={"/About"} className="Link">
+                    <Button>
+                      About <KeyboardArrowRightIcon />{" "}
+                    </Button>
+                  </Link>
                 </li>
                 <li className="list-inline-item">
-                  <Button>
-                    Shop &nbsp; <KeyboardArrowRightIcon />{" "}
-                  </Button>
+                  <Link to={"/Listing"} className="Link">
+                    <Button>
+                      Deals &nbsp; <KeyboardArrowRightIcon />{" "}
+                    </Button>
+                  </Link>
                 </li>
                 <li className="list-inline-item">
                   <Button>
@@ -106,43 +114,69 @@ const Nav = () => {
                   <div className="dropdownMenu">
                     <ul className="list list-inline mb-0">
                       <li className="list-inline-item">
-                        <Button>Home</Button>
+                        <Link to="/Home" className="Link">
+                          <Button>Home</Button>
+                        </Link>
                       </li>
                       <li className="list-inline-item">
-                        <Button>About Us</Button>
-                      </li>
-                      <li className="list-inline-item ">
-                        <Button>Contact</Button>
-                      </li>
-                      <li className="list-inline-item">
-                        <Button>My Account</Button>
+                        <Link className="Link" to="/About">
+                          <Button>About Us</Button>
+                        </Link>
                       </li>
                       <li className="list-inline-item">
-                        <Button>Login</Button>
+                        <Link to="/Contact" className="Link">
+                          <Button>Contact</Button>
+                        </Link>
                       </li>
                       <li className="list-inline-item">
-                        <Button>Register</Button>
+                        <Link to="/Listing" className="Link">
+                          <Button>Listing</Button>
+                        </Link>
                       </li>
                       <li className="list-inline-item">
-                        <Button>Forget password</Button>
+                        <Link to="/MyAccount" className="Link">
+                          <Button>My Account</Button>
+                        </Link>
                       </li>
                       <li className="list-inline-item">
-                        <Button>Forget password</Button>
+                        <Link to="/Login" className="Link">
+                          <Button>Login</Button>
+                        </Link>
                       </li>
                       <li className="list-inline-item">
-                        <Button>Reset password</Button>
+                        <Link to="/Register" className="Link">
+                          <Button>Register</Button>
+                        </Link>
                       </li>
                       <li className="list-inline-item">
-                        <Button>Purchase Guide</Button>
+                        <Link to="/ForgetPassword" className="Link">
+                          <Button>Forget Password</Button>
+                        </Link>
                       </li>
                       <li className="list-inline-item">
-                        <Button>Privacy Policy</Button>
+                        <Link to="/ResetPassword" className="Link">
+                          <Button>Reset Password</Button>
+                        </Link>
                       </li>
                       <li className="list-inline-item">
-                        <Button>Terms of Service</Button>
+                        <Link to="/PurchaseGuide" className="Link">
+                          <Button>Purchase Guide</Button>
+                        </Link>
                       </li>
                       <li className="list-inline-item">
-                        <Button>404 Page</Button>
+                        <Link to="/PrivacyPolicy" className="Link">
+                          <Button>Privacy Policy</Button>
+                        </Link>
+                      </li>
+                      <li className="list-inline-item">
+                        <Link to="/TermsOfService" className="Link">
+                          <Button>Terms of Service</Button>
+                        </Link>
+                      </li>
+                      <li className="list-inline-item">
+                        <Link to="*" className="Link">
+                          <Button>404 Page</Button>
+                        </Link>
                       </li>
                     </ul>
                   </div>
